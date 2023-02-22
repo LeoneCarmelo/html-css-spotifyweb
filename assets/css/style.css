@@ -1,0 +1,18 @@
+/* #region Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* #endregion Reset */
+/* #region Color */
+:root {
+    --bg-content: #141922;
+    --bg-sidebar: black;
+    --bg-player: #282828;
+    --text-color: #a3a3a3;
+    --text-white:white;
+}
+/* #endregion Color */
+
