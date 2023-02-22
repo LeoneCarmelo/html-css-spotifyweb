@@ -17,6 +17,7 @@
 /* #endregion Color */
 body {
     max-height: 100vh;
+    font-family: 'Circular Std', sans-serif;
 }
 /* #region Mobile */
 
@@ -37,7 +38,7 @@ body {
 .sidebar .menu, 
 .sidebar .playlist, 
 .sidebar .sidebar_footer {
-    font-size: 13px;
+    font-size: 11px;
 }
 .sidebar > .logo {
     width:100%;
@@ -99,7 +100,9 @@ body {
 }
 
 .body_playlist {
-    overflow: scroll;
+    width:100%;
+    height: 170px;
+    overflow-y: scroll;
 }
 
 .body_playlist ul {
@@ -114,13 +117,14 @@ body {
 /* Sidebar Footer */
 
 .sidebar_footer {
+    width:90%;
     position:absolute;
     bottom:0;
+    z-index:2;
+    padding-top: 8px;
+    margin-top: 20px;
 }
 
-.sidebar_footer {
-    text-align: center;
-}
 .sidebar_footer div span:last-child {
     display:none;
 }
@@ -145,6 +149,7 @@ body {
 footer {
     background-color: var(--bg-player);
     height: 80px;
+    position:relative;
 }
 /* #endregion Mobile */
 
