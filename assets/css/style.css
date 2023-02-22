@@ -15,4 +15,45 @@
     --text-white:white;
 }
 /* #endregion Color */
+body {
+    max-height: 100vh;
+}
+/* #region Mobile */
+.top {
+    height: calc(100vh - 80px);
+    display:flex;
+}
+
+.sidebar {
+    background-color: var(--bg-sidebar);
+    height: calc(100vh - 80px);
+    width:50px;
+}
+
+.content {
+    background-color: var(--bg-content);
+    height: calc(100vh - 80px);
+    width: calc(100% - 50px);
+    color: var(--text-white);
+    overflow-y: auto;
+}
+
+footer {
+    background-color: var(--bg-player);
+    height: 80px;
+}
+/* #endregion Mobile */
+
+/* #region Desktop */
+
+@media screen and (min-width: 480px) {
+    .sidebar {
+        width:200px;
+    }
+    
+    .content {
+        width: calc(100% - 200px);
+    }
+    
+}
 
