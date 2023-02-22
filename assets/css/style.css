@@ -19,6 +19,8 @@ body {
     max-height: 100vh;
 }
 /* #region Mobile */
+
+/* Layout */
 .top {
     height: calc(100vh - 80px);
     display:flex;
@@ -28,6 +30,108 @@ body {
     background-color: var(--bg-sidebar);
     height: calc(100vh - 80px);
     width:50px;
+    padding:0.8rem;
+    position:relative;
+}
+
+.sidebar .menu, 
+.sidebar .playlist, 
+.sidebar .sidebar_footer {
+    font-size: 13px;
+}
+.sidebar > .logo {
+    width:100%;
+    margin-bottom: 1rem;
+} 
+
+/* Logo */
+.logo img {
+    max-width: 100%;
+}
+
+.logo img:first-child {
+    display: none;
+    width:150px;
+}
+
+/* Menu */
+.menu, .playlist, .sidebar_footer {
+    color: var(--text-color);
+}
+
+.menu ul {
+    list-style:none;
+    text-align: center;
+}
+
+.menu li:nth-child(2) {
+    padding:0.8rem 0;
+}
+
+.menu li span:last-child {
+    display:none;
+}
+
+.icon {
+    max-width:18px;
+}
+
+/* Playlist */
+.playlist {
+    display:none;
+}
+
+.square {
+    display: inline-block;
+    width:30px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--text-color);
+    color: black;
+    text-align: center;
+    line-height:30px;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.playlist h3 {
+    color: var(--text-white);
+    padding: 1rem 0 0.6rem 0;
+}
+
+.body_playlist {
+    overflow: scroll;
+}
+
+.body_playlist ul {
+    margin: 10px 0;
+    list-style: none;
+}
+
+.body_playlist li {
+    padding-bottom: 8px;;
+}
+
+/* Sidebar Footer */
+
+.sidebar_footer {
+    position:absolute;
+    bottom:0;
+}
+
+.sidebar_footer {
+    text-align: center;
+}
+.sidebar_footer div span:last-child {
+    display:none;
+}
+
+.app_install {
+    padding-bottom: 5px;
+    margin-bottom: 6px;
+}
+
+.user {
+    padding-bottom:5px;
 }
 
 .content {
@@ -54,6 +158,35 @@ footer {
     .content {
         width: calc(100% - 200px);
     }
+
+    .logo img:last-child {
+        display: none;
+    }
+
+    .logo img:first-child {
+        display:block;
+    }
     
+    .menu ul {
+        text-align: left;
+    }
+
+    .menu li span:last-child {
+        display:inline;
+    }
+
+    .playlist {
+        display: block;
+    }
+
+    .app_install {
+        border-bottom: 1px solid var(--text-color);
+    }
+
+    .sidebar_footer div span:last-child {
+        display:inline;
+    }
 }
+
+/* #endregion Desktop */
 
