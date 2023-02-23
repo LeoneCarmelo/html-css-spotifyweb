@@ -278,6 +278,22 @@ main h3 + span {
 .c_head {
     width:80%;
     margin: 0 auto;
+    position:relative;
+}
+
+.overlay {
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.413);
+    position: absolute;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+
+.c_head:hover .overlay {
+    display :flex;
 }
 
 .c_head img {
