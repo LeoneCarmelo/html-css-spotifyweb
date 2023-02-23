@@ -48,6 +48,9 @@ body {
     display: flex;
 }
 
+.b_50 {
+    border-radius: 50%;
+}
 /* #region Mobile */
 
 /* #region Sidebar */
