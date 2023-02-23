@@ -14,6 +14,7 @@
     --text-color: #a3a3a3;
     --text-white:white;
     --header:#080b12;
+    --effect: #adff2f;
 }
 /* #endregion Color */
 /* Common rules */
@@ -23,7 +24,7 @@ body {
     overflow: hidden;
 }
 
-.menu span:hover,
+.menu li:hover,
 .head_playlist span:last-child:hover,
 .playlist li:hover,
 .sidebar_footer i:hover,
@@ -33,6 +34,10 @@ body {
 .c_icons i:hover {
     color: var(--text-white);
     cursor: pointer;
+}
+
+.menu li:hover {
+    border-left: 2px solid var(--effect);
 }
 /* Utility */
 .white {
@@ -373,6 +378,33 @@ footer .menu_left {
     margin:2px 10px 0;
     border-radius:5px;
 }
+
+.time {
+    width:60px;
+    height:3px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position:relative;
+}
+
+.dot_time {
+    width:10px;
+    height:10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left:55px;
+    bottom:-3.5px;
+    display:none;
+}
+
+.length:hover .time {
+    background-color: var(--effect);
+}
+
+.length:hover .dot_time {
+    display:block;
+}
 /* #endregion Player */
 
 
@@ -388,9 +420,36 @@ footer .menu_left {
 
 .volume_bar {
     width:80px;
-    height: 2px;
+    height: 3px;
     background-color: var(--text-color);
     border-radius: 5px;
+}
+
+.volume {
+    width:25px;
+    height:3px;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+}
+
+.dot_vol {
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left:18px;
+    bottom:-3.5px;
+    display: none;
+}
+
+.volume_bar:hover .volume {
+    background-color: var(--effect);
+}
+
+.volume_bar:hover .dot_vol {
+    display:block;
 }
 /* #region menu_right */
 
