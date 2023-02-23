@@ -16,9 +16,23 @@
     --header:#080b12;
 }
 /* #endregion Color */
+/* Common rules */
 body {
     max-height: 100vh;
     font-family: 'Circular Std', sans-serif;
+    overflow: hidden;
+}
+
+.menu span:hover,
+.head_playlist span:last-child:hover,
+.playlist li:hover,
+.sidebar_footer i:hover,
+.sidebar_footer span:hover,
+.menu_content a:hover,
+.song_name span:last-child:hover,
+.c_icons i:hover {
+    color: var(--text-white);
+    cursor: pointer;
 }
 /* Utility */
 .white {
@@ -28,6 +42,7 @@ body {
 .d_flex {
     display: flex;
 }
+
 /* #region Mobile */
 
 /* #region Sidebar */
@@ -42,7 +57,8 @@ body {
     height: calc(100vh - 70px);
     width:50px;
     padding:0.8rem;
-    position:relative;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .sidebar .menu, 
@@ -77,9 +93,6 @@ body {
     text-align: center;
 }
 
-.menu li {
-    cursor: pointer;
-}
 
 .menu li:nth-child(2) {
     padding:0.8rem 0;
@@ -92,6 +105,8 @@ body {
 .icon {
     max-width:18px;
 }
+
+
 /* #endregion Menu */
 
 /* #region Playlist */
@@ -110,6 +125,10 @@ body {
     font-weight: 900;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+.square:hover {
+    background-color: white;
 }
 
 .playlist h3 {
@@ -139,24 +158,26 @@ body {
     width:90%;
     padding-top: 8px;
     margin-top: 14px;
-
 }
 
 .sidebar_footer div span:last-child {
     display:none;
 }
 
+.sidebar_footer .app_install, .sidebar_footer .user {
+    text-align: center;
+}
+
+
+
 .app_install {
     padding-bottom: 5px;
     margin-bottom: 6px;
     font-size: 9px;
-    cursor: pointer;
 }
 
 .user {
     padding-bottom:5px;
-    cursor: pointer;
-
 }
 
 
@@ -187,6 +208,10 @@ body {
     border:1px solid white;
     padding:10px 20px;
     border-radius: 18px;
+}
+
+a:hover {
+    font-size: medium;
 }
 /* #endregion header */
 
@@ -265,13 +290,15 @@ main h3 + span {
 }
 
 /* #endregion Main */
-/* #region footer */
+
+/* #region Footer */
 footer {
     background-color: var(--bg-player);
     height: 70px;
     position:relative;
     padding:5px;
     justify-content: space-between;
+    overflow-x:hidden;
 }
 
 /* #region menu_left */
@@ -295,15 +322,16 @@ footer .menu_left {
   margin-left: 5px;
 }
 
-.menu_left i {
-    padding:0 8px;
+.menu_left .c_icons i {
+    padding:2px 8px;
     font-size: 11px;
     cursor: pointer;
 }
 
-.fa-heart {
-    margin-left: 20px;
+.c_icons {
+    flex-wrap: wrap;
 }
+
 /* #endregion menu_left */
 
 /* #region Player */
@@ -311,7 +339,7 @@ footer .menu_left {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:12px;
+    gap:10px;
     cursor: pointer;
 }
 
@@ -320,7 +348,7 @@ footer .menu_left {
 }
 
 .top_menu i {
-    margin:0 15px;
+    padding:0 8px;
     font-size: 12px;
 }
 
@@ -328,13 +356,18 @@ footer .menu_left {
     font-size: 17px;
 }
 
+.top_menu i:nth-child(3):hover {
+    font-size: 22px;
+}
+
+
 .length_song span {
     color: var(--text-white);
     font-size: 6px;
 }
 
 .length {
-    width:300px;
+    width:100px;
     height:3px;
     background-color: var(--text-color);
     margin:2px 10px 0;
@@ -348,7 +381,7 @@ footer .menu_left {
     align-items: center;
     font-size: 10px;
     color: var(--text-white);
-    gap:15px;
+    gap:12px;
     cursor: pointer;
 
 }
@@ -365,6 +398,8 @@ footer .menu_left {
 /* #endregion footer */
 
 /* #endregion Mobile */
+/* #endregion footer */
+/* #endregion Content */
 
 /* #region Desktop */
 
@@ -397,6 +432,10 @@ footer .menu_left {
         display: block;
     }
 
+    .sidebar_footer .app_install, .sidebar_footer .user {
+        text-align: left;
+    }
+
     .app_install {
         border-bottom: 1px solid var(--text-color);
     }
@@ -409,10 +448,23 @@ footer .menu_left {
     /* Content */
     .menu_content {
         width: 65%;
-        margin:0 auto;
+        margin: 0 auto;
+    }
+
+}
+    /* Player */
+@media screen and (min-width: 510px) {
+    .length {
+        width:200px
     }
 }
 
+@media screen and (min-width: 614px) {  
+
+    .length {
+        width:300px;
+    }
+}
 @media screen and (min-width: 878px) {
     .col_3_md {
         width: calc(100% / 12 * 3)
