@@ -73,6 +73,10 @@ body {
     text-align: center;
 }
 
+.menu li {
+    cursor: pointer;
+}
+
 .menu li:nth-child(2) {
     padding:0.8rem 0;
 }
@@ -101,6 +105,7 @@ body {
     line-height:30px;
     font-weight: 900;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .playlist h3 {
@@ -141,10 +146,13 @@ body {
     padding-bottom: 5px;
     margin-bottom: 6px;
     font-size: 9px;
+    cursor: pointer;
 }
 
 .user {
     padding-bottom:5px;
+    cursor: pointer;
+
 }
 
 
@@ -161,6 +169,7 @@ body {
     overflow-y: auto;
 }
 
+/* #region header */
 .content .header {
     text-align: right;
     padding:1.8rem;
@@ -175,7 +184,9 @@ body {
     padding:10px 20px;
     border-radius: 18px;
 }
+/* #endregion header */
 
+/* #region menu */
 .menu_content {
     width: 95%;
     margin:0 auto;
@@ -195,10 +206,62 @@ body {
 .menu_content li a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 13px;
+    font-size: 12px;
     padding:0.8rem 0.6rem;
 }
+/* #endregion menu */
 
+/* #region Main */
+main {
+    width:96%;
+    margin:auto;
+}
+
+main h3 + span {
+    color: var(--text-color);
+    font-size:8px;
+}
+
+.row {
+    margin-top:10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width:95%;
+    margin-bottom:8px;
+    cursor: pointer;
+}
+
+.col_6_sm {
+    width: calc(100% / 12 * 6);
+}
+
+.c_head {
+    width:80%;
+    margin: 0 auto;
+}
+
+.c_head img {
+    max-width: 100%;
+}
+
+.c_body {
+    text-align: center;
+}
+
+.c_body h5 {
+    font-size:11px;
+}
+
+.c_body span:last-child {
+    color: var(--text-color);
+    font-size:8px;
+}
+
+/* #endregion Main */
+/* #region footer */
 footer {
     background-color: var(--bg-player);
     height: 70px;
@@ -253,5 +316,17 @@ footer {
     }
 }
 
+@media screen and (min-width: 878px) {
+    .col_3_md {
+        width: calc(100% / 12 * 3)
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .col_2_lg {
+        width: calc(100% / 12 * 2);
+    }
+}
 /* #endregion Desktop */
 
