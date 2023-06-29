@@ -72,7 +72,7 @@ body {
 .sidebar .menu, 
 .sidebar .playlist, 
 .sidebar .sidebar_footer {
-    font-size: 11px;
+    font-size: 16px;
 }
 .sidebar > .logo {
     width:100%;
@@ -105,6 +105,7 @@ body {
 
 .menu li:nth-child(2) {
     padding:0.8rem 0;
+    margin:5px 0;
 }
 
 .menu li span:last-child {
@@ -149,6 +150,7 @@ body {
     width:100%;
     height: 170px;
     overflow-y: scroll;
+    margin-top: 5px;;
 }
 
 .body_playlist ul {
@@ -245,7 +247,7 @@ a:hover {
 .menu_content li a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 12px;
+    font-size: 15px;
     padding:0.8rem 0.6rem;
 }
 
@@ -260,7 +262,7 @@ a:hover {
     display:none;
 }
 
-.menu_content a:active .segment {
+.menu_content a:hover .segment {
     display: block;
 }
 /* #endregion menu */
@@ -273,7 +275,7 @@ main {
 
 main h3 + span {
     color: var(--text-color);
-    font-size:8px;
+    font-size:11px;
 }
 
 .row {
@@ -324,12 +326,12 @@ main h3 + span {
 }
 
 .c_body h5 {
-    font-size:11px;
+    font-size:0.9rem;
 }
 
 .c_body span:last-child {
     color: var(--text-color);
-    font-size:8px;
+    font-size:0.7rem;
 }
 
 /* #endregion Main */
